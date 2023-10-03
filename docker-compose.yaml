@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  tomcat1:
+    build: ./tomcat1
+    volumes:
+      - ./tomcat:/tomcat
+
+  tomcat2:
+    build: ./tomcat2
+    depends_on:
+      - tomcat1
